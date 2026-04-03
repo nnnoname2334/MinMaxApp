@@ -3,6 +3,9 @@ using System.Windows;
 
 namespace MinMaxApp
 {
+    /// <summary>
+    /// Логика взаимодействия для MainWindow.xaml
+    /// </summary>
     public partial class MainWindow : Window
     {
         private readonly MathLogic _mathLogic;
@@ -12,7 +15,12 @@ namespace MinMaxApp
             InitializeComponent();
             _mathLogic = new MathLogic();
         }
-
+        /// <summary>
+        /// Обработчик нажатия кнопки "Вычислить".
+        /// Выполняет сбор данных с формы и вызывает метод расчёта.
+        /// </summary>
+        /// <param name="sender">Объект, вызвавший событие.</param>
+        /// <param name="e">Параметры события.</param>
         private void BtnCalculate_Click(object sender, RoutedEventArgs e)
         {
             // Проверка корректности ввода
